@@ -11,10 +11,12 @@ import java.security.DigestException;
 
 public class CalculatorServiceTest {
 
+
     private final CalculatorService calculatorService = new CalculatorService();
 
     @Test
     public void plusTest() {
+
         Number actual = calculatorService.calculatorPlus(1, 2);
         Number expected = 3;
 
@@ -24,9 +26,12 @@ public class CalculatorServiceTest {
 
         Assertions.assertEquals(expected, actual);
 
+
     }
+
     @Test
     public void minusTest() {
+
         Number actual = calculatorService.calculatorMinus(1, 2);
         Number expected = -1;
 
@@ -49,10 +54,12 @@ public class CalculatorServiceTest {
 
         Assertions.assertEquals(expected, actual);
 
+
     }
 
     @Test
     public void divideTest() {
+
         Number actual = calculatorService.calculatorDivide(6, 2);
         Number expected = 3;
 
@@ -66,8 +73,9 @@ public class CalculatorServiceTest {
 
     @Test
     public void NegativeDivideTest() {
-        Assertions.assertThrows(DivByZeroException.class,()->calculatorService.calculatorDivide(1,0));
-        Assertions.assertThrows(DivByZeroException.class,()->calculatorService.calculatorDivide(-1,0));
+
+        Assertions.assertThrows(DivByZeroException.class, () -> calculatorService.calculatorDivide(1, 0));
+        Assertions.assertThrows(DivByZeroException.class, () -> calculatorService.calculatorDivide(-1, 0));
 
 
     }
